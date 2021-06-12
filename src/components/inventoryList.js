@@ -14,9 +14,11 @@ function InventoryList () {
             <h4>Check Inventory</h4>
             <table className='table'>
                 <tr>
-                    <td>Item name:</td>
+                    <td>Item name:</td><td>DoP:</td>
+                </tr>
+                <tr>
                     <td>Soba</td>
-                    <td>DoP:</td><td> 06/01/2021</td>
+                    <td> 06/01/2021</td>
                     <td><button>Delete</button></td>
                 </tr>
             </table>
