@@ -5,6 +5,7 @@ import ItemsNeededListContainer from './components/itemsNeededListContainer';
 import ItemsHaveListContainer from './components/itemsHaveListContainer'
 import ShoppingListContainer from './components/shoppingListContainer'
 import CheckInItemForm from './components/checkInItemForm';
+import InventoryList from './components/inventoryList';
 
 
 
@@ -28,6 +29,9 @@ function App() {
       </div>
       <div>
       <CheckInItemForm />
+      </div>
+      <div>
+        <InventoryList />
       </div>
     </div>
 
