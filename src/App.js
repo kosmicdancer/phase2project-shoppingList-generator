@@ -18,6 +18,8 @@ function App() {
     
       <div>
       <MenuPlanForm />
+      </div>
+      <div>
       <ItemsNeededListContainer />
       </div>
       <div>

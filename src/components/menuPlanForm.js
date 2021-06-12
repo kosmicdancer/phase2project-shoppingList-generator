@@ -1,13 +1,10 @@
 import React, { useState } from 'react';
+// import { Input } from "reactstrap";
 
 function MenuPlanForm () {
     const menuPlan = [
         { menus : 1 },
-        { menus : 2 },
-        { menus : 3 },
-        { menus : 4 },
-        { menus : 5 },
-        { menus : 6 }        
+       
         ] 
     function handleSubmit (e) {
 
@@ -15,7 +12,10 @@ function MenuPlanForm () {
 
     return (
         <div>
-            <form>select menu</form>
+            <form>
+                <h3>Select Menu</h3>
+                <input type="select" />
+            </form>
 
         </div>
 

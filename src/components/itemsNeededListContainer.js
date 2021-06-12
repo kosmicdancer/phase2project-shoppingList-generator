@@ -5,7 +5,7 @@ function itemsNeededListContainer ({menus}) {
     return (
         <div>
             <h4>Menu Name</h4>
-            <p>Ingredients:</p>
+            <p><strong>Ingredients:</strong></p>
             <ul>
                 <li>ing1</li>
                 <li>ing2</li>
