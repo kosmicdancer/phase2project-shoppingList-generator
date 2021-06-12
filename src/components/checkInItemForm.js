@@ -3,9 +3,16 @@ import React from 'react';
 function CheckInItemForm () {
 
     return (
-        <form>
+        <div>
+            <form>
+                <label>Enter Item Name</label>
+                <input type='text' /><br/>
+                <label>Enter Date of Purchase </label>
+                <input type='text' /><br/>
+                <button>Check in Item</button>
 
-        </form>
+            </form>
+        </div>
         
     )
 }
