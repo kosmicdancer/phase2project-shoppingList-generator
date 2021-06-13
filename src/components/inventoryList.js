@@ -20,7 +20,7 @@ function InventoryList ({ item, DoP }) {
     
     return (
         <div>
-            <h4>Check Inventory</h4>
+            <h4>Inventory</h4>
             <table className='table'>
                 <tr>
                     <td>Item name:</td><td>DoP:</td>
@@ -28,7 +28,7 @@ function InventoryList ({ item, DoP }) {
                 <tr>
                     <td>{item}</td>
                     <td>{DoP}</td>
-                    <td><button onClick={HandleDeleteItem} className="delete">Delete</button></td>
+                    <td><button onClick={HandleDeleteItem} class="btn btn-secondary">Delete</button></td>
                 </tr>
             </table>
         </div>

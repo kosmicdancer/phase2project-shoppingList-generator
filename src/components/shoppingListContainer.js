@@ -6,8 +6,8 @@ function ShoppingListContainer () {
     return (
         <div>
         <h4>Get these</h4>
-            <ul>
-                <li>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
 
                 </li>
             </ul>

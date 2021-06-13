@@ -28,7 +28,7 @@ function CheckInItemForm () {
                     <input type='text'class="form-control" placeholder="item name" />
                     <label>Enter Date of Purchase</label>
                     <input type='text'class="form-control" placeholder="dd-mm-yyyy" />
-                    <button>Check in Item</button>
+                    <button class="btn btn-secondary">Check in Item</button>
                 </form>
             </div>
         )

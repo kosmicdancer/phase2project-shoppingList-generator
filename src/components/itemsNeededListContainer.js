@@ -1,16 +1,14 @@
 import React from 'react';
 
-function itemsNeededListContainer () {
-
-
-
+function itemsNeededListContainer ({menus}) {
+    
     return (
         <div>
             <h4>Menu Name</h4>
             <p><strong>Ingredients:</strong></p>
-            <ul>
-                <li>ing1</li>
-                <li>ing2</li>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">ing1</li>
+                <li class="list-group-item">ing2</li>
             </ul>
         </div>
 

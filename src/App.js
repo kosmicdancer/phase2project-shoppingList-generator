@@ -27,26 +27,26 @@ function App() {
   //   }
 
   return (
-    <div>
-      <header className="text-center">
+    <div class="container-lg p-3 mb-2 bg-light text-dark">
+      <header class ="text-center p-3 mb-2 bg-secondary text-white">
         <h1>Grocery Shopping List Generator</h1>
         <p>Plan out before you go out! Check in items after each shopping!</p>
       </header>
     
-      <div>
+      <div class="container-md p-3 mb-2 bg-light text-dark">
       <MenuPlanForm />
       </div>
-      <div>
+      <div class="container-md p-3 mb-2 bg-light text-dark">
       <ItemsNeededListContainer />
       </div>
-      <div>
+      <div class="container-md p-3 mb-2 bg-light text-dark">
       <ItemsHaveListContainer />
       <ShoppingListContainer />
       </div>
-      <div>
+      <div class="container-md p-3 mb-2 bg-light text-dark">
       <CheckInItemForm />
       </div>
-      <div>
+      <div class="container-lg p-3 mb-2 bg-light text-dark">
         <InventoryList />
       </div>
     </div>

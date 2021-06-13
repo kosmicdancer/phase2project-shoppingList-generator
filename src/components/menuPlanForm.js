@@ -25,7 +25,7 @@ function MenuPlanForm () {
                     <option value='Grilled Fish Teishoku'>Grilled Fish Teishoku</option>
                     <option value='Oyako Don'>Oyako Don</option>
                 </select>
-                <input type="submit" value="Submit" />
+                <input type="submit" value="Submit" class="btn btn-secondary"/>
             </form>
         </div>
      );
