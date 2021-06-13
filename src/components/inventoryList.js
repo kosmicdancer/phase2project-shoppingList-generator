@@ -1,14 +1,23 @@
-import React from 'react';
-import ItemsHaveListContainer from './itemsHaveListContainer';
-import itemsNeededListContainer from './itemsNeededListContainer';
+import React, {useState, useEffect} from 'react';
 
-function InventoryList () {
-    // fetch ('https://localhost3000/items') {
-    //     .then 
-    // }
+function InventoryList ({ item, DoP }) {
+    const [items, setItems] = useState([]);
+    
 
+    // function HandleInventoryDisplay () {
+        useEffect (() => {
+        fetch("https://phase2project-json.herokuapp.com/items") 
+        .then(r => r.json())         
+        .then(data => setItems(data.items))},[])
 
-
+    function HandleDeleteItem (id) {
+        fetch(`https://phase2project-json.herokuapp.com/items/${id}`, {method: "DELETE"})
+        .then(r => r.json())
+        .then(() => {
+            const updatedInventory = items.filter((q) => q.id !== id);
+            setItems(updatedInventory);}
+        )}
+    
     return (
         <div>
             <h4>Check Inventory</h4>
@@ -17,9 +26,9 @@ function InventoryList () {
                     <td>Item name:</td><td>DoP:</td>
                 </tr>
                 <tr>
-                    <td>Soba</td>
-                    <td> 06/01/2021</td>
-                    <td><button>Delete</button></td>
+                    <td>{item}</td>
+                    <td>{DoP}</td>
+                    <td><button onClick={HandleDeleteItem} className="delete">Delete</button></td>
                 </tr>
             </table>
         </div>

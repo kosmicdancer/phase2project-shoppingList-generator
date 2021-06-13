@@ -1,6 +1,8 @@
 import React from 'react';
 
-function itemsNeededListContainer ({menus}) {
+function itemsNeededListContainer () {
+
+
 
     return (
         <div>

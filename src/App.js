@@ -1,5 +1,5 @@
-import React from 'react';
 import './App.css';
+import React from 'react';
 import MenuPlanForm from './components/menuPlanForm';
 import ItemsNeededListContainer from './components/itemsNeededListContainer';
 import ItemsHaveListContainer from './components/itemsHaveListContainer'
@@ -8,8 +8,24 @@ import CheckInItemForm from './components/checkInItemForm';
 import InventoryList from './components/inventoryList';
 
 
-
 function App() {
+  // const [menus, setMenus] = useState([]);
+  // const [items, setItems] = useState({items});
+
+  // function HandleMenuSelect () {
+  //   useEffect(() => {
+  //   fetch("https://phase2project-json.herokuapp.com/menus")         
+  //   .then(r => r.json())         
+  //   .then(data => setMenus(data.menus))},[])
+  //   console.log(menus)
+  //   }
+  // function HandleInventoryDisplay () {
+  //   useEffect (() => {
+  //   fetch("https://phase2project-json.herokuapp.com/items") 
+  //   .then(r => r.json())         
+  //   .then(data => setItems(data.items))},[])
+  //   }
+
   return (
     <div>
       <header className="text-center">

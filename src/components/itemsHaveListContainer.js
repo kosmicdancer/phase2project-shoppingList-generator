@@ -8,7 +8,7 @@ function ItemsHaveListContainer() {
             <h4>Have these</h4>
             <ul>
                 <li>
-
+                    
                 </li>
             </ul>
         </div>

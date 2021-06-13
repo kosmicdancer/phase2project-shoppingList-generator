@@ -1,24 +1,33 @@
-import React, { useState } from 'react';
-// import { Input } from "reactstrap";
+import React, { useState, useEffect } from 'react';
 
 function MenuPlanForm () {
-    const menuPlan = [
-        { menus : 1 },
-       
-        ] 
-    function handleSubmit (e) {
-
-    }
-
+    const [menus, setMenus] = useState([])
+               
+    function HandleMenuSelect (e) {
+        e.preventDefault();
+        
+        useEffect(() => {
+            fetch("https://phase2project-json.herokuapp.com/menus")         
+            .then(r => r.json())         
+            .then(data => setMenus(data.menus))},[])
+            console.log(menus)
+            }
+  
     return (
         <div>
-            <form>
+            <form onSelect>
                 <h3>Select Menu</h3>
-                <input type="select" />
+                <select value={menus} onSelect={HandleMenuSelect} class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+                    <option value='Shrimp Tempura Soba'>Shrimp Tempura Soba</option>
+                    <option value='Veggie Curry & Rice'>Veggie Curry + Rice</option>
+                    <option value='Okonomi-Yaki'>Okonomi-Yaki</option>
+                    <option value='Omu-Rice'>Omu-Rice</option>
+                    <option value='Grilled Fish Teishoku'>Grilled Fish Teishoku</option>
+                    <option value='Oyako Don'>Oyako Don</option>
+                </select>
+                <input type="submit" value="Submit" />
             </form>
-
         </div>
-
      );
 }
  
