@@ -2,7 +2,7 @@ import React from 'react';
 import {menuSelection} from './menuPlanForm';
 
 function ItemsNeededListContainer ({menuSelection}) {
-const { id, ingredients } = itemsNeeded 
+// const { id, ingredients } = itemsNeeded 
     return (
         <div>
             <h4>{menuSelection}</h4>

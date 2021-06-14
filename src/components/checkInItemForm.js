@@ -4,7 +4,7 @@ function CheckInItemForm () {
     const [items, setItems] = useState([]);
     // const [DoP, setDoP] = useState([]);
 
-    function HandleCheckInSubmit (e) {
+    function handleCheckInSubmit (e) {
         e.preventDefault();
         fetch("https://phase2project-json.herokuapp.com/items", {
         method: "POST",
@@ -23,7 +23,7 @@ function CheckInItemForm () {
 
     return (
             <div>
-                <form onSubmit={HandleCheckInSubmit}>
+                <form onSubmit={handleCheckInSubmit}>
                     <label>Enter Item Name</label>
                     <input type='text'class="form-control" placeholder="item name" />
                     <label>Enter Date of Purchase</label>

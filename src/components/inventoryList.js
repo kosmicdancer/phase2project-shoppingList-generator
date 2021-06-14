@@ -6,14 +6,14 @@ function InventoryList () {
     const [items, setItems] = useState([]);
     const { id, item, DoP } = itemInventory
 
-    function HandleCheckInventory () {
+    function handleCheckInventory () {
         useEffect (() => {
         fetch("https://phase2project-json.herokuapp.com/items") 
         .then(r => r.json())         
         .then(data => setItems(data.items))})
     }
 
-    function HandleDeleteItem (id) {
+    function handleDeleteItem (id) {
         fetch(`https://phase2project-json.herokuapp.com/items/${id}`, {method: "DELETE"})
         .then(r => r.json())
         .then(() => {
@@ -24,12 +24,12 @@ function InventoryList () {
     return (
         <div>
             <h4>Check Inventory</h4>
-            <button onClick={HandleCheckInventory}>Display</button>
+            <button onClick={handleCheckInventory}>Display</button>
             <div> {itemInventory}
             key={id},
             item={item},
             DoP={DoP}
-            <button onClick={HandleDeleteItem}>Delete</button>
+            <button onClick={handleDeleteItem}>Delete</button>
             </div>
         </div>
     )

@@ -4,7 +4,7 @@ function MenuPlanForm () {
     const [menuSelection, setMenuSelection] = useState([])
     // const menuSelection = (menus.name)
                
-    function HandleMenuSelect () {
+    function handleMenuSelect () {
         useEffect(() => {
             fetch("https://phase2project-json.herokuapp.com/menus")         
             .then(r => r.json())         
@@ -16,7 +16,7 @@ function MenuPlanForm () {
         <div>
             <form>
                 <h3>Select Menu</h3>
-                <select value={menuSelection} onSelect={HandleMenuSelect} class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+                <select value={menuSelection} onSelect={handleMenuSelect} class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
                     <option value={menuSelection}>`${menuSelection}`</option>
                     {/* <option value='Shrimp Tempura Soba'>Shrimp Tempura Soba</option> */}
                     {/* <option value='Veggie Curry & Rice'>Veggie Curry + Rice</option>
