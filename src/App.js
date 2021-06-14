@@ -9,22 +9,7 @@ import InventoryList from './components/inventoryList';
 
 
 function App() {
-  // const [menus, setMenus] = useState([]);
-  // const [items, setItems] = useState({items});
-
-  // function HandleMenuSelect () {
-  //   useEffect(() => {
-  //   fetch("https://phase2project-json.herokuapp.com/menus")         
-  //   .then(r => r.json())         
-  //   .then(data => setMenus(data.menus))},[])
-  //   console.log(menus)
-  //   }
-  // function HandleInventoryDisplay () {
-  //   useEffect (() => {
-  //   fetch("https://phase2project-json.herokuapp.com/items") 
-  //   .then(r => r.json())         
-  //   .then(data => setItems(data.items))},[])
-  //   }
+  
 
   return (
     <div class="container-lg p-3 mb-2 bg-light text-dark">

@@ -37,30 +37,7 @@ function CheckInItemForm () {
 
     export default CheckInItemForm
     
-    // function HandleCheckInSubmit () {
-        
-    // }
-
     
-    
-    
-    //   function updatePet(id, updatedPet) {
-    //     fetch(`${BASE_URL}/${id}`, {
-    //       method: "PATCH",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //       body: JSON.stringify(updatedPet),
-    //     })
-    //       .then((r) => r.json())
-    //       .then((updatedPet) => {
-    //         const updatedPets = pets.map((pet) => {
-    //           if (pet.id === updatedPet.id) return updatedPet;
-    //           return pet;
-    //         });
-    //         setPets(updatedPets);
-    //       });
-    //   }
 
     
     

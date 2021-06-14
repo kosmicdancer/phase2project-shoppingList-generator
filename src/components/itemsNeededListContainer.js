@@ -1,18 +1,19 @@
 import React from 'react';
+import {menuSelection} from './menuPlanForm';
 
-function itemsNeededListContainer ({menus}) {
-    
+function ItemsNeededListContainer ({menuSelection}) {
+const { id, ingredients } = itemsNeeded 
     return (
         <div>
-            <h4>Menu Name</h4>
+            <h4>{menuSelection}</h4>
             <p><strong>Ingredients:</strong></p>
             <ul class="list-group list-group-flush">
-                <li class="list-group-item">ing1</li>
-                <li class="list-group-item">ing2</li>
+                <li class="list-group-item">key={menus.id}, item={menus.ingredients} </li>
             </ul>
         </div>
 
     )
 }
 
-export default itemsNeededListContainer
+export default ItemsNeededListContainer
+export {itemsNeeded}

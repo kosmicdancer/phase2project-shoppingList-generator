@@ -1,14 +1,17 @@
 import React, {useState, useEffect} from 'react';
+import CheckInItemForm from './checkInItemForm';
 
-function InventoryList ({ item, DoP }) {
+
+function InventoryList () {
     const [items, setItems] = useState([]);
-    
+    const { id, item, DoP } = itemInventory
 
-    // function HandleInventoryDisplay () {
+    function HandleCheckInventory () {
         useEffect (() => {
         fetch("https://phase2project-json.herokuapp.com/items") 
         .then(r => r.json())         
-        .then(data => setItems(data.items))},[])
+        .then(data => setItems(data.items))})
+    }
 
     function HandleDeleteItem (id) {
         fetch(`https://phase2project-json.herokuapp.com/items/${id}`, {method: "DELETE"})
@@ -20,19 +23,17 @@ function InventoryList ({ item, DoP }) {
     
     return (
         <div>
-            <h4>Inventory</h4>
-            <table className='table'>
-                <tr>
-                    <td>Item name:</td><td>DoP:</td>
-                </tr>
-                <tr>
-                    <td>{item}</td>
-                    <td>{DoP}</td>
-                    <td><button onClick={HandleDeleteItem} class="btn btn-secondary">Delete</button></td>
-                </tr>
-            </table>
+            <h4>Check Inventory</h4>
+            <button onClick={HandleCheckInventory}>Display</button>
+            <div> {itemInventory}
+            key={id},
+            item={item},
+            DoP={DoP}
+            <button onClick={HandleDeleteItem}>Delete</button>
+            </div>
         </div>
     )
 }
 
 export default InventoryList
+
