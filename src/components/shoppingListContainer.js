@@ -1,15 +1,18 @@
 import React from 'react';
 
 function ShoppingListContainer () {
-    const itemsToShop = ({isInInventory}) => {
-        !isInInventory ? itemsNeeded.map(menuSelection): null  }
+    // const ingredients = {ingredients}
+    // const items = {items}
+    const itemsToShop = ({ingredients, items}) => {
+        ({ingredients}.filter({ingredients} !== items.item))
+    }
 
     return (
         <div>
-        <h4>Shop these</h4>
-            <ul class="list-group list-group-flush">
+        <h3>Shop these</h3>
+            <ul class="list-group">
                 <li class="list-group-item">
-                    `${itemsToShop}`
+                    {itemsToShop}
                 </li>
             </ul>
         </div>

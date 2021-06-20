@@ -1,17 +1,18 @@
-import React from 'react';
-import { itemsNeeded } from './itemsNeededListContainer';
-import { menuSelection } from './menuPlanForm';
+import React from 'react'
 
-function ItemsHaveListContainer({}) {
-    function itemsHave ({isInInventory}) {
-        (isInInventory ? itemsNeeded.map(menuSelection) : null )
-    } 
+function ItemsHaveListContainer() {
+    // const ingredients = {ingredients}
+    // const items = {items}
+    const itemsHave = ({ingredients, items}) => {
+        ({ingredients}.filter(ingredients === items.item))         
+        }
+    
     return (
         <div>
             <h4>Have these</h4>
-            <ul class="list-group list-group-flush">
+            <ul class="list-group">
                 <li class="list-group-item">
-                    `${itemsHave}`
+                    {itemsHave}
                 </li>
             </ul>
         </div>
