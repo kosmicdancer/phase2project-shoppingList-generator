@@ -1,40 +1,35 @@
 import React, {useState, useEffect} from 'react';
+import Item from './Item'
 // import CheckInItemForm from './CheckInItemForm';
 
 function InventoryList () {
     const [items, setItems] = useState([]);
-    // const { id, item, DoP } = items
+    // const {id, item, DoP} = items
+
 
         useEffect (() => {
         fetch("https://phase2project-json.herokuapp.com/items") 
         .then(r => r.json())         
-        .then(data => setItems(data.items))})
+        .then((items) => setItems(items));
+    }, []);
     
     function handleCheckInventory () {
-        setItems({items})
-        }
-
-    function handleDeleteItem (id) {
-        fetch(`https://phase2project-json.herokuapp.com/items/${id}`, {method: "DELETE"})
-        .then(r => r.json())
-        .then(() => {
-            const updatedInventory = items.filter((q) => q.id !== id);
-            setItems(updatedInventory);}
+        const inventoryList = (items.map((item) => 
+        <Item />
+        )
         )}
+
     
     return (
         <div>
             <h4>Check Inventory</h4>
             <button class="btn btn-secondary" onClick={handleCheckInventory}>Check Now</button>
-            <div>
+            <div class="d-grid gap-1 d-md-flex justify-content-md-end">
                 <ul class="list-group">
-                    <li class="list-group-item">
-                    <button class="btn btn-secondary" onClick={handleDeleteItem}>Delete</button>
-                    </li>
+                    <InventoryList />
+                    <li><Item /></li>
                 </ul>
-            {/* item={items.item},
-            DoP={items.DoP} */}
-            
+
             </div>
         </div>
     )

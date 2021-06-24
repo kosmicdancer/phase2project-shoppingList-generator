@@ -28,7 +28,7 @@ function App() {
       <div class="container-md p-3 mb-2 bg-light text-dark">
         <CheckInItemForm />
       </div>
-      <div class="container-lg p-3 mb-2 bg-light text-dark">
+      <div class="container-md p-3 mb-2 bg-light text-dark">
         <InventoryList />
       </div>
     </>

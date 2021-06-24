@@ -8,7 +8,7 @@ function MenuPlanForm () {
         useEffect(() => {
             fetch("https://phase2project-json.herokuapp.com/menus")         
             .then(r => r.json())         
-            .then(data => setMenu(data))},[])
+            .then(data => setMenu(data.menu))},[])
             // console.log(menuSelection)
             
             
@@ -24,8 +24,8 @@ function MenuPlanForm () {
         <div>
             <form onChange={handleChange}>
                 <label><h3>Select Menu</h3></label>
-                <select  value={menu}  class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
-                    {/* <option value={menuSelection}>{menuSelection}</option> */}
+                <select  value={menu}   class="form-select form-select-md mb-3" aria-label=".form-select-lg example">
+                
                     <option value='Shrimp Tempura Soba'>Shrimp Tempura Soba</option>
                     <option value='Veggie Curry & Rice'>Veggie Curry + Rice</option>
                     <option value='Okonomi-Yaki'>Okonomi-Yaki</option>
